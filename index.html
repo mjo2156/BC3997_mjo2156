@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="source.js"></script>
+  </head>
+  <body>
+    <h1>Program Synthesis</h1>
+    <h2>HW #1 Michael Ozymy mjo2156</h2>
+    Input: <input type="text" id="input"/><br><br>
+    Output: <input type="text" id="out"/><br><br>
+    <button id="runButton">Compute</button><br><br>
+    <div id="output"></div>
+
+    <script>
+      document.getElementById("runButton").addEventListener("click", function() {
+        var input = document.getElementById("input").value;
+        var out = document.getElementById("out").value;
+        var code = compute(input,out,0);
+        document.getElementById("output").innerHTML = code;
+      });
+    </script>
+  </body>
+</html>
